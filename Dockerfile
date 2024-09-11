@@ -12,5 +12,5 @@ RUN apt-get update && \
 COPY --chmod=755 scripts /scripts
 COPY --chmod=644 configs/logrotate.conf /etc/logrotate.conf
 COPY --chmod=644 configs/supervisord.conf /etc/supervisor/supervisord.conf
-VOLUME ["/var/lib/cloudflare-warp"]
+# VOLUME ["/var/lib/cloudflare-warp"]
 CMD ["/usr/bin/supervisord"]
